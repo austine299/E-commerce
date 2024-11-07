@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link href="https://fonts.google.com/specimen/Kumbh+Sans" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+    
+
+</head>
+<body>
+
+    <heder class="heading">
+        <div class="container heading-body">
+            <div class="row">
+                <div class="heading-header col-sm-12 col-lg-2">
+                    <h1>sneakers</h1>
+                </div>
+                <div class="nav-content col-sm-12 col-lg-8">
+
+                    <a href="#">Collection</a>
+                    <a href="#">Men</a>
+                    <a href="#">Women</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="profile col-sm-12 col-lg-2 ">
+                    <a href="#">
+                        <img src="images/icon-cart.svg" alt="Shopping Cart"
+                             class="shopping-cart-nav" />
+                    </a>
+                    <div class="cart-body">
+                        <div>
+                            <h3>cart</h3>
+                            <p class="cart-detail"></p>
+                        </div>
+                        <hr />
+                        <div class="cart-des" style="padding:70px;text-align:center;">
+                            <p style="font-size: 20px; font-weight: bold; color: hsl(219, 9%, 45%);" 
+                               class="checkout">Your Cart is Empty</p>
+                        </div>
+                    </div>
+
+                    <a href="#">
+                        <img src="images/image-avatar.png" alt="profile image" class="profile-img"
+                             style="" />
+                    </a>
+                </div>
+            </div>
+            <hr style="" />
+        </div>
+    </heder>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 row">
+                <div class="col-sm-12 col-lg-12">
+                    <img src="images/image-product-1.jpg" alt="Alternate Text" class="open-modal cursor"  />
+                </div>
+                <div class="col-sm-12 col-lg-12 row" style="margin-top:-15%;">
+                    <img src="images/image-product-1-thumbnail.jpg" alt="Alternate Text"
+                         class="col-lg-3 col-sm-3 product-thumbnail cursor" />
+                    <img src="images/image-product-2-thumbnail.jpg" alt="Alternate Text"
+                         class="col-lg-3 col-sm-3 product-thumbnail cursor" />
+                    <img src="images/image-product-3-thumbnail.jpg" alt="Alternate Text"
+                         class="col-lg-3 col-sm-3 product-thumbnail cursor" />
+                    <img src="images/image-product-4-thumbnail.jpg" alt="Alternate Text"
+                         class="col-lg-3 col-sm-3 product-thumbnail cursor" />
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-12 product-details">
+                <span class="company-name">Sneaker Company</span>
+                <h2 class="edition">Fall Limited Edition Sneakers</h2>
+                <p class="pro-des">
+                    These low-profile sneakers are your perfect casual wear companion. Featuring a
+                    durable rubber outer sole, they’ll withstand everything the weather can offer
+                </p>
+                <div>
+                    <span class="price">$125.00</span>
+                    <span class="discount">50%</span>
+                </div>
+                <span class="formal-price">$125.00</span>
+                <div class="add-to-cart">
+                    <div class="quantity-body">
+                        <span class=" minus cursor">-</span>
+                        <span class="product-quantity">0</span>
+                        <span class=" plus cursor">+</span>
+                    </div>
+                    
+
+                    <a href="#" class="cart-btn">
+                        <img src="images/icon-cart.svg" alt="Shopping Cart" style="" class="shopping-cart" />
+                        Add to Cart
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid modal" id="light-box ">
+        <div class="row">
+            <span class="close cursor col-lg-12 col-lg-12">&times;</span>
+            <div class="col-lg-12 col-sm-12 row slider-container">
+                <div class="col-sm-12 col-lg-4 slider-inner">
+                    <img src="images/image-product-1.jpg" alt="Alternate Text" class="product-modal cursor active" />
+                    <img src="images/image-product-2.jpg" alt="Alternate Text" class="product-modal cursor " />
+                    <img src="images/image-product-3.jpg" alt="Alternate Text" class="product-modal cursor" />
+                    <img src="images/image-product-4.jpg" alt="Alternate Text" class="product-modal cursor" />
+                </div>
+                <div class="col-sm-12 col-lg-4 row tumb-img">
+                    <img src="images/image-product-1-thumbnail.jpg" alt="Alternate Text"
+                         class="col-lg-3 col-sm-3 product-thumbnail-2 cursor" />
+                    <img src="images/image-product-2-thumbnail.jpg" alt="Alternate Text"
+                         class="col-lg-3 col-sm-3 product-thumbnail-2 cursor" />
+                    <img src="images/image-product-3-thumbnail.jpg" alt="Alternate Text"
+                         class="col-lg-3 col-sm-3 product-thumbnail-2 cursor" />
+                    <img src="images/image-product-4-thumbnail.jpg" alt="Alternate Text"
+                         class="col-lg-3 col-sm-3 product-thumbnail-2 cursor" />
+                </div>
+
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

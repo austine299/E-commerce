@@ -31,19 +31,30 @@
                     <a href="#">Contact</a>
                 </div>
                 <div class="profile col-sm-12 col-lg-2 ">
+
                     <a href="#">
                         <img src="images/icon-cart.svg" alt="Shopping Cart"
-                             class="shopping-cart-nav" />
+                             class="shopping-cart-nav" /><span class="product-quantity cart-qty">0</span>
                     </a>
                     <div class="cart-body">
-                        <div>
-                            <h3>cart</h3>
-                            <p class="cart-detail"></p>
-                        </div>
+                        <span class="close-cart cursor col-lg-1 col-lg-1">&times;</span>
+                        <h2>Cart</h2>
                         <hr />
-                        <div class="cart-des" style="padding:70px;text-align:center;">
-                            <p style="font-size: 20px; font-weight: bold; color: hsl(219, 9%, 45%);" 
-                               class="checkout">Your Cart is Empty</p>
+                        <div class=" cart-items">
+
+
+                        </div>
+                        <div class="cart-des" style="padding:30px;text-align:center;">
+                            <p style="font-size: 20px; font-weight: bold; color: hsl(219, 9%, 45%);"
+                               class="checkout">
+                                Your Cart is Empty
+                            </p>
+                            <p style="display: none; " class="checkout" id="btn-check-out">
+                                <button class=" checkout-btn" style="background-color: hsl(26, 100%, 55%);
+                                    border:none;width:100%; height:70px; border-radius:10px; font-size:20px;font-weight:bold;">
+                                    Check Out
+                                </button>
+                            </p>
                         </div>
                     </div>
 
@@ -56,11 +67,12 @@
             <hr style="" />
         </div>
     </heder>
+
     <div class="container">
-        <div class="row">
+        <div class="row" id="product-container">
             <div class="col-lg-6 col-sm-12 row">
-                <div class="col-sm-12 col-lg-12">
-                    <img src="images/image-product-1.jpg" alt="Alternate Text" class="open-modal cursor"  />
+                <div class="col-sm-12 col-lg-12" id="first_product">
+                    <img src="images/image-product-1.jpg" alt="Alternate Text" class="open-modal cursor" />
                 </div>
                 <div class="col-sm-12 col-lg-12 row" style="margin-top:-15%;">
                     <img src="images/image-product-1-thumbnail.jpg" alt="Alternate Text"
@@ -75,7 +87,7 @@
             </div>
 
             <div class="col-lg-6 col-sm-12 product-details">
-                <span class="company-name">Sneaker Company</span>
+                <span class="company-name" data-name="Sneakers">Sneaker Company</span>
                 <h2 class="edition">Fall Limited Edition Sneakers</h2>
                 <p class="pro-des">
                     These low-profile sneakers are your perfect casual wear companion. Featuring a
@@ -85,16 +97,17 @@
                     <span class="price">$125.00</span>
                     <span class="discount">50%</span>
                 </div>
-                <span class="formal-price">$125.00</span>
-                <div class="add-to-cart">
-                    <div class="quantity-body">
-                        <span class=" minus cursor">-</span>
+                <span class="formal-price" data-price="125.00">$125.00</span>
+                <div class="add-to-cart row">
+                    <div class="quantity-body col-sm-12">
+                        <button class=" minus cursor" data-name="Fall Limited Edition Sneakers" style="border:none">-</button>
                         <span class="product-quantity">0</span>
-                        <span class=" plus cursor">+</span>
+                        <button class=" plus cursor"  data-name="Fall Limited Edition Sneakers" 
+                                style="border:none">+</button>
                     </div>
-                    
 
-                    <a href="#" class="cart-btn">
+
+                    <a href="#" class="cart-add cart-btn  col-sm-12" data-price="125.00" data-name="Fall Limited Edition Sneakers" src="images/image-product-1.jpg">
                         <img src="images/icon-cart.svg" alt="Shopping Cart" style="" class="shopping-cart" />
                         Add to Cart
                     </a>
@@ -105,6 +118,9 @@
         </div>
 
     </div>
+   
+
+  
 
     <div class="container-fluid modal" id="light-box ">
         <div class="row">
@@ -116,7 +132,7 @@
                     <img src="images/image-product-3.jpg" alt="Alternate Text" class="product-modal cursor" />
                     <img src="images/image-product-4.jpg" alt="Alternate Text" class="product-modal cursor" />
                 </div>
-                <div class="col-sm-12 col-lg-4 row tumb-img">
+                <div class="col-sm-6 col-lg-4 row tumb-img">
                     <img src="images/image-product-1-thumbnail.jpg" alt="Alternate Text"
                          class="col-lg-3 col-sm-3 product-thumbnail-2 cursor" />
                     <img src="images/image-product-2-thumbnail.jpg" alt="Alternate Text"

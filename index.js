@@ -156,7 +156,6 @@ $(".plus").click(function (event) {
 
 function addItem(image, name, price, count) {
     var carts = loadCart();
-    console.log(carts);
     var currentCart = carts.find((c) => c.name === name)
     count = count + (currentCart?.count || 0);
     carts = carts.filter((c) => c.name !== name)
@@ -168,43 +167,43 @@ function addItem(image, name, price, count) {
 
 
 function removeItemFromCart(name) {
-    var cart = loadCart();
-    for (var i in cart) {
-        if (cart[i].name === name) {
-            cart[i].count--;
-            if (cart[i].count === 0) {
-                cart.splice(i, 1);
+    var carts = loadCart();
+    for (var i in carts) {
+        if (carts[i].name === name) {
+            carts[i].count--;
+            if (carts[i].count === 0) {
+                carts.splice(i, 1);
             }
             break;
 
         }
     }
-    saveCart();
+    saveCart(carts);
 }
 
 function addItemToCart(name, price, count) {
-    var cart = loadCart();
-    for (var i in cart) {
-        if (cart[i].name === name) {
-            cart[i].count += count;
+    var carts = loadCart();
+    for (var i in carts) {
+        if (carts[i].name === name) {
+            carts[i].count += count;
             
             break;
 
         }
     }
-    saveCart();
+    saveCart(carts);
 }
 
 function removeItemFromCartAll(name) {
-    var cart = loadCart();
-    for (var i in cart) {
-        if (cart[i].name === name) {
-            cart.splice(i, 1);
+    var carts = loadCart();
+    for (var i in carts) {
+        if (carts[i].name === name) {
+            carts.splice(i, 1);
             break;
 
         }
     }
-    saveCart();
+    saveCart(carts);
 }
 
 function clearCart() {
@@ -219,7 +218,6 @@ function saveCart(cart) {
 
 function loadCart() {
     if (!["undefined", null, "null", undefined].includes(localStorage.getItem("shoppingCart"))) {
-        console.log(localStorage.getItem("shoppingCart"));
     return JSON.parse(localStorage.getItem("shoppingCart"));
     }
     return []

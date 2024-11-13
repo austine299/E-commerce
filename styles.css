@@ -92,9 +92,9 @@
 
         .cart-body {
             position: absolute;
-            width: 60%;
+            width: 40%;
             height: auto;
-            right: 20%;
+            right: 10%;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 20px 20px 0 #ccc;

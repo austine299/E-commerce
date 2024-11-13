@@ -218,7 +218,7 @@ function saveCart(cart) {
 
 
 function loadCart() {
-    if (localStorage.getItem("shoppingCart") != "undefined") {
+    if (!["undefined", null, "null", undefined].includes(localStorage.getItem("shoppingCart"))) {
         console.log(localStorage.getItem("shoppingCart"));
     return JSON.parse(localStorage.getItem("shoppingCart"));
     }

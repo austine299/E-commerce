@@ -79,7 +79,8 @@ nextAndPrev();
 //}
 
 
-$(".cart-add").click(function () {
+$("#cart-add").click(function () {
+    console.log("hi")
     var image = $(this).attr("src");
     var name = $(this).attr("data-name");
     var price = Number($(this).attr("data-price"));
@@ -91,16 +92,19 @@ $(".cart-add").click(function () {
 
 
 function updateCart() {
+    console.log("hello")
     var html = "";
     totalCount = 0;
     totalPrice = 0;
     for (var i in cart) {
+        console.log("for Loop", cart[i])
         var image = cart[i].image;
         var name = cart[i].name;
         var price = cart[i].price;
         var count = cart[i].count;
         totalCount = + count;
         totalPrice = price * count;
+       
         html +=` <div class="col-sm-12 col-lg-12 row mt-5 mb-3 cart-row" style="">
                     <div class="col-sm-4 col-lg-3 ">
                         <img src="${image}" alt="Alternate Text" class="open-modal cursor" />
@@ -123,6 +127,7 @@ class="col-sm-1 col-lg-1 btn delete cursor" />
     }
     $(".product-quantity").text(count);
     $(".cart-items").html(html);
+   
 }
 
 $(".cart-items").on("click", ".delete", function (event) {
